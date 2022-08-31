@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Numeral.JS</title>
+</head>
+<body onload="updatecount()">
+    <h1>Clicker Game Using Numeral.JS</h1>
+    <div>
+        <p>
+            <span class="clicks">Clicks: 0</span>
+            <br>
+            <span class="cps">Autoclicking at 0 Clicks Per Second.</span>
+        </p>
+    </div>
+    <button class="btn" onclick="clicked()">Click</button>
+    <div class="gens" style="display: none;">
+        <ul class="gen1">
+            <li>
+                <span>
+                    <button onclick="buyslow()" class="slowclick">Slow Clicker (1 cps) x 0</button>
+                    <span class="cost">Cost: 10 Clicks</span>
+                </span>
+            </li>
+        </ul>
+        <div class="gens2" style="display: none;">
+            <ul class="gen2">
+                <li>
+                    <span>
+                        <button class="okayclick" onclick="buyokay()">Okay Clicker (5 cps) x 0</button>
+                        <span class="cost2">Cost: 50 Clicks</span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="loop.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="format.js"></script>
+</html>
