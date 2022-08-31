@@ -1,7 +1,7 @@
 const format = (number, decPlaces) => {
     decPlaces = Math.pow(10, decPlaces)
   
-    var abbrev = ['K', 'M', 'B', 'T']
+    var abbrev = ['K', 'M', 'B', 'T', 'Qa', 'Qu']
 
     for (var i = abbrev.length - 1; i >= 0; i--) {
       var size = Math.pow(10, (i + 1) * 3)

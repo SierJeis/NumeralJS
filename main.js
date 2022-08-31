@@ -1,8 +1,12 @@
 var clicks = 0;
 var slowclick = 0;
 var okayclick = 0;
+var ultraclick = 0;
+var hyperclick = 0;
 var slowcost = 10;
 var okaycost = 50;
+var ultracost = 500;
+var hypercost = 5000;
 var lastUpdate = Date.now();
 var cps = 0;
 
@@ -27,3 +31,18 @@ function buyokay(){
     }
 }
 
+function buyultra(){
+    if(clicks >= 500){
+        clicks -= 500;
+        ultraclick++;
+        cps += 20;
+    }
+}
+
+function buyhyper(){
+    if(clicks >= 5000){
+        clicks -= 5000;
+        hyperclick++;
+        cps += 100;
+    }
+}

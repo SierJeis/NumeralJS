@@ -1,3 +1,35 @@
 *{
     user-select: none;
 }
+
+.gen1{
+    display: none;
+}
+
+.gen2{
+    display: none;
+}
+
+.gen3{
+    display: none;
+}
+
+.gen4{
+    display: none;
+}
+
+#bullet1{
+    list-style-type: none;
+}
+
+#bullet2{
+    list-style-type: none;
+}
+
+#bullet3{
+    list-style-type: none;
+}
+
+#bullet4{
+    list-style-type: none;
+}

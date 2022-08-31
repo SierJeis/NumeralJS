@@ -17,25 +17,33 @@
         </p>
     </div>
     <button class="btn" onclick="clicked()">Click</button>
-    <div class="gens" style="display: none;">
-        <ul class="gen1">
-            <li>
-                <span>
+    <div class="gens">
+        <ul>
+            <li id="bullet1">
+                <span class="gen1">
                     <button onclick="buyslow()" class="slowclick">Slow Clicker (1 cps) x 0</button>
                     <span class="cost">Cost: 10 Clicks</span>
                 </span>
             </li>
+            <li id="bullet2">
+                <span class="gen2">
+                    <button class="okayclick" onclick="buyokay()">Okay Clicker (5 cps) x 0</button>
+                    <span class="cost2">Cost: 50 Clicks</span>
+                </span>
+            </li>
+            <li id="bullet3">
+                <span class="gen3">
+                    <button class="ultraclick" onclick="buyultra()">Ultra Clicker (20 cps) x 0</button>
+                    <span class="cost3">Cost: 500 Clicks</span>
+                </span>
+            </li>
+            <li id="bullet4">
+                <span class="gen4">
+                    <button class="hyperclick" onclick="buyhyper()">Hyper Clicker (100 cps) x 0</button>
+                    <span class="cost4">Cost: 5K Clicks</span>
+                </span>
+            </li>
         </ul>
-        <div class="gens2" style="display: none;">
-            <ul class="gen2">
-                <li>
-                    <span>
-                        <button class="okayclick" onclick="buyokay()">Okay Clicker (5 cps) x 0</button>
-                        <span class="cost2">Cost: 50 Clicks</span>
-                    </span>
-                </li>
-            </ul>
-        </div>
     </div>
 </body>
 <script src="main.js"></script>

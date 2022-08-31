@@ -1,3 +1,5 @@
+var clicker1 = document.querySelector(".gen1");
+
 function updatecount(){
     setInterval(() => {
         if(clicks <= 1000){
@@ -6,13 +8,26 @@ function updatecount(){
             document.querySelector(".clicks").innerHTML = "Clicks: "+format(clicks, 1);
         }
         document.querySelector(".cost").innerHTML = "Cost: "+slowcost+" Clicks"
-        document.querySelector(".cps").innerHTML = "Autoclicking at "+cps+" Clicks Per Second"
+        document.querySelector(".cps").innerHTML = "Autoclicking at "+format(cps, 1)+" Clicks Per Second"
         document.querySelector(".slowclick").innerHTML = "Slow Clicker (1 cps) x "+slowclick;
+        document.querySelector(".okayclick").innerHTML = "Okay Clicker (5 cps) x "+okayclick;
+        document.querySelector(".ultraclick").innerHTML = "Ultra Clicker (20 cps) x"+ultraclick;
+        document.querySelector(".hyperclick").innerHTML = "Hyper Clicker (100) x "+hyperclick;
         if(clicks >= 10){
-            document.querySelector(".gens").style.display = 'inline';
+            document.querySelector(".gen1").style.display = 'inline';
+            document.getElementById("bullet1").style.listStyle = 'disc';
         }
         if(clicks >= 50){
-            document.querySelector(".gens2").style.display = 'inline';
+            document.querySelector(".gen2").style.display = 'inline';
+            document.getElementById("bullet2").style.listStyle = 'disc';
+        }
+        if(clicks >= 500){
+            document.querySelector(".gen3").style.display = 'inline';
+            document.getElementById("bullet3").style.listStyle = 'disc';
+        }
+        if(clicks >= 5000){
+            document.querySelector(".gen4").style.display = 'inline';
+            document.getElementById("bullet4").style.listStyle = 'disc';
         }
     }, 10);
 }
@@ -20,6 +35,8 @@ function updatecount(){
 function productionLoop(diff){
     clicks += slowclick * diff;
     clicks += okayclick * 5 * diff;
+    clicks += ultraclick * 20 * diff;
+    clicks += hyperclick * 100 * diff;
 }
 
 function mainLoop(){
@@ -30,4 +47,4 @@ function mainLoop(){
     lastUpdate = Date.now()
 }
 
-setInterval(mainLoop, 50)
+setInterval(mainLoop, 10)
