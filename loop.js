@@ -9,12 +9,12 @@ function updatecount(){
         }
         document.querySelector(".cost").innerHTML = "Cost: "+slowcost+" Clicks"
         document.querySelector(".cps").innerHTML = "Autoclicking at "+format(cps, 1)+" Clicks Per Second"
-        document.querySelector(".slowclick").innerHTML = "Slow Clicker (1 cps) x "+slowclick;
-        document.querySelector(".okayclick").innerHTML = "Okay Clicker (5 cps) x "+okayclick;
-        document.querySelector(".ultraclick").innerHTML = "Ultra Clicker (20 cps) x"+ultraclick;
-        document.querySelector(".hyperclick").innerHTML = "Hyper Clicker (100 cps) x "+hyperclick;
-        document.querySelector(".megaclick").innerHTML = "Mega Clicker (350 cps) x "+megaclick;
-        document.querySelector(".gigaclick").innerHTML = "Giga Clicker (1000 cps) x "+gigaclick;
+        document.querySelector(".slowclick").innerHTML = "Slow Clicker (1 cps) x "+format(slowclick, 1);
+        document.querySelector(".okayclick").innerHTML = "Okay Clicker (5 cps) x "+format(okayclick, 1);
+        document.querySelector(".ultraclick").innerHTML = "Ultra Clicker (20 cps) x"+format(ultraclick, 1);
+        document.querySelector(".hyperclick").innerHTML = "Hyper Clicker (100 cps) x "+format(hyperclick, 1);
+        document.querySelector(".megaclick").innerHTML = "Mega Clicker (350 cps) x "+format(megaclick, 1);
+        document.querySelector(".gigaclick").innerHTML = "Giga Clicker (1K cps) x "+format(gigaclick, 1);
         if(clicks >= 10){
             document.querySelector(".gen1").style.display = 'inline';
             document.getElementById("bullet1").style.listStyle = 'disc';

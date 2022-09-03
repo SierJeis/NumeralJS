@@ -38,9 +38,12 @@ function getsave(){
     if(gigaclick == null){
         gigaclick = 0;
     }
+    if(cps == null){
+        cps = 0;
+    }
 }
 
 setInterval(save, 1000);
 
-localStorage.clear()
+window.onload = getsave();
 
