@@ -22,25 +22,35 @@ function getsave(){
     cps = JSON.parse(localStorage.getItem("CPS"));
     if(slowclick == null){
         slowclick = 0;
+        document.querySelector(".slowclick").style.display = 'none';
     }
     if(okayclick == null){
         okayclick = 0;
+        document.querySelector(".okayclick").style.display = 'none';
     }
     if(ultraclick == null){
         ultraclick = 0;
+        document.querySelector(".megaclick").style.display = 'none';
     }
     if(hyperclick == null){
         hyperclick = 0;
+        document.querySelector(".hyperclick").style.display = 'none';
     }
     if(megaclick == null){
         megaclick = 0;
+        document.querySelector(".megaclick").style.display = 'none';
     }
     if(gigaclick == null){
         gigaclick = 0;
+        document.querySelector(".gigaclick").style.display = 'none';
     }
     if(cps == null){
         cps = 0;
     }
+}
+
+function reset(){
+    localStorage.clear();
 }
 
 setInterval(save, 1000);
