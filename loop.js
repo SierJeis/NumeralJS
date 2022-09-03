@@ -12,7 +12,9 @@ function updatecount(){
         document.querySelector(".slowclick").innerHTML = "Slow Clicker (1 cps) x "+slowclick;
         document.querySelector(".okayclick").innerHTML = "Okay Clicker (5 cps) x "+okayclick;
         document.querySelector(".ultraclick").innerHTML = "Ultra Clicker (20 cps) x"+ultraclick;
-        document.querySelector(".hyperclick").innerHTML = "Hyper Clicker (100) x "+hyperclick;
+        document.querySelector(".hyperclick").innerHTML = "Hyper Clicker (100 cps) x "+hyperclick;
+        document.querySelector(".megaclick").innerHTML = "Mega Clicker (350 cps) x "+megaclick;
+        document.querySelector(".gigaclick").innerHTML = "Giga Clicker (1000 cps) x "+gigaclick;
         if(clicks >= 10){
             document.querySelector(".gen1").style.display = 'inline';
             document.getElementById("bullet1").style.listStyle = 'disc';
@@ -29,6 +31,14 @@ function updatecount(){
             document.querySelector(".gen4").style.display = 'inline';
             document.getElementById("bullet4").style.listStyle = 'disc';
         }
+        if(clicks >= 20000){
+            document.querySelector(".gen5").style.display = 'inline';
+            document.getElementById("bullet5").style.listStyle = 'disc';
+        }
+        if(clicks >= 100000){
+            document.querySelector(".gen6").style.display = 'inline';
+            document.getElementById("bullet6").style.listStyle = 'disc';
+        }
     }, 10);
 }
 
@@ -37,6 +47,8 @@ function productionLoop(diff){
     clicks += okayclick * 5 * diff;
     clicks += ultraclick * 20 * diff;
     clicks += hyperclick * 100 * diff;
+    clicks += megaclick * 350 * diff;
+    clicks += gigaclick * 1000 * diff;
 }
 
 function mainLoop(){

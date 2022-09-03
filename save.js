@@ -4,6 +4,8 @@ function save(){
     localStorage.setItem("OkayClickers", okayclick);
     localStorage.setItem("UltraClickers", ultraclick);
     localStorage.setItem("HyperClickers", hyperclick);
+    localStorage.setItem("MegaClickers", megaclick);
+    localStorage.setItem("GigaClickers", gigaclick);
     localStorage.setItem("LastUpdate", lastUpdate);
     localStorage.setItem("CPS", cps);
 }
@@ -14,6 +16,8 @@ function getsave(){
     okayclick = JSON.parse(localStorage.getItem("OkayClickers"));
     ultraclick = JSON.parse(localStorage.getItem("UltraClickers"));
     hyperclick = JSON.parse(localStorage.getItem("HyperClickers"));
+    megaclick = JSON.parse(localStorage.getItem("MegaClickers"));
+    gigaclick = JSON.parse(localStorage.getItem("GigaClickers"));
     lastUpdate = JSON.parse(localStorage.getItem("LastUpdate"));
     cps = JSON.parse(localStorage.getItem("CPS"));
     if(slowclick == null){
@@ -28,8 +32,15 @@ function getsave(){
     if(hyperclick == null){
         hyperclick = 0;
     }
+    if(megaclick == null){
+        megaclick = 0;
+    }
+    if(gigaclick == null){
+        gigaclick = 0;
+    }
 }
 
 setInterval(save, 1000);
 
-window.onload = getsave();
+localStorage.clear()
+

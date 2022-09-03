@@ -3,10 +3,14 @@ var slowclick = 0;
 var okayclick = 0;
 var ultraclick = 0;
 var hyperclick = 0;
+var megaclick = 0;
+var gigaclick = 0;
 var slowcost = 10;
 var okaycost = 50;
 var ultracost = 500;
 var hypercost = 5000;
+var megacost = 20000;
+var gigacost = 100000;
 var lastUpdate = Date.now();
 var cps = 0;
 
@@ -44,6 +48,22 @@ function buyhyper(){
         clicks -= 5000;
         hyperclick++;
         cps += 100;
+    }
+}
+
+function buymega(){
+    if(clicks >= 20000){
+        clicks -= 20000;
+        megaclick++;
+        cps += 350;
+    }
+}
+
+function buygiga(){
+    if(clicks >= 100000){
+        clicks -= 100000;
+        gigaclick++;
+        cps += 1000;
     }
 }
 

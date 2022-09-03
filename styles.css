@@ -18,6 +18,14 @@
     display: none;
 }
 
+.gen5{
+    display: none;
+}
+
+.gen6{
+    display: none;
+}
+
 #bullet1{
     list-style-type: none;
 }
@@ -31,6 +39,14 @@
 }
 
 #bullet4{
+    list-style-type: none;
+}
+
+#bullet5{
+    list-style-type: none;
+}
+
+#bullet6{
     list-style-type: none;
 }
 
