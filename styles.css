@@ -33,3 +33,17 @@
 #bullet4{
     list-style-type: none;
 }
+
+.settings{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+
+.menu {
+    display: none;
+}
+
+.return {
+    display: none;
+}

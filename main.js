@@ -46,3 +46,21 @@ function buyhyper(){
         cps += 100;
     }
 }
+
+function settings(){
+    document.querySelector(".main").style.display = 'none';
+    document.querySelector(".btn").style.display = 'none';
+    document.querySelector(".settings").style.display = 'none';
+    document.querySelector(".menu").style.display = 'inline';
+    document.querySelector(".gens").style.display = 'none';
+    document.querySelector(".return").style.display = 'inline';
+}
+
+function Return(){
+    document.querySelector(".main").style.display = 'inline';
+    document.querySelector(".btn").style.display = 'inline';
+    document.querySelector(".settings").style.display = 'inline';
+    document.querySelector(".menu").style.display = 'none';
+    document.querySelector(".gens").style.display = 'inline';
+    document.querySelector(".return").style.display = 'none';
+}

@@ -9,7 +9,7 @@
 </head>
 <body onload="updatecount()">
     <h1>Clicker Game Using Numeral.JS</h1>
-    <div>
+    <div class="main">
         <p>
             <span class="clicks">Clicks: 0</span>
             <br>
@@ -45,9 +45,18 @@
             </li>
         </ul>
     </div>
+    <div>
+        <button class="settings" onclick="settings()">Settings</button>
+        <button class="return" onclick="Return()">Return</button>
+    </div>
+    <div class="menu">
+        <button class="save" onclick="save()">Save</button>
+        <button class="load" onclick="getsave()">Load</button>
+    </div>
 </body>
 <script src="main.js"></script>
 <script src="loop.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 <script src="format.js"></script>
+<script src="save.js"></script>
 </html>
